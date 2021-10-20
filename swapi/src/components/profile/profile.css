@@ -1,0 +1,9 @@
+.profile {
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right img {
+    border-radius: 25%;
+}

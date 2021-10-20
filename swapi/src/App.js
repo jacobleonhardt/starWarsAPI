@@ -4,10 +4,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Profile from './components/profile/index.js';
 import './App.css';
 
+import luke from './components/images/luke-skywalker-2.jpg'
 
 function App() {
-
-
   return (
     <div className="App">
       <BrowserRouter>
@@ -19,7 +18,7 @@ function App() {
             </main>
           </Route>
           <Route path="/luke-skywalker" exact={true}>
-            <Profile />
+            <Profile pic={luke} />
           </Route>
         </Switch>
       </BrowserRouter>
