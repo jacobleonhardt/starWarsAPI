@@ -1,0 +1,19 @@
+.character {
+    height: 200px;
+    width: 200px;
+    border: 1px #000 solid;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: .5em;
+}
+
+.character h2 {
+    margin: 0 0 21px 0;
+}
+
+.character:hover {
+    color: #FFE81F;
+    transition: .5s;
+}
