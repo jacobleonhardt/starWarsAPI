@@ -1,4 +1,4 @@
-import React, { useEffect, useDispatch } from 'react'
+import React from 'react'
 import Character from '../character'
 import { Link } from 'react-router-dom'
 import './landing.css'

@@ -10,8 +10,11 @@ const getInfo = (character) => ({
 // thunks
 
 export const luke = () => async (dispatch) => {
-    const response = await fetch('/luke-skywalker');
+    console.log('############ IN THUNK')
+    const response = await fetch('/api/character/luke-skywalker');
     const data = await response.json();
+
+    console.log('$$$$$$$$$$$$$$$$ RETURNED: ', data)
     if (data.errors) {
         return data;
     }

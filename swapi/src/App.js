@@ -1,11 +1,20 @@
 import Landing from './components/landing/index.js'
 import logo from './components/images/star-wars-logo.png'
-import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { useDispatch } from 'react-redux';
 import Profile from './components/profile/index.js';
-import profile from './store/profile'
+import { luke } from './store/profile'
 import './App.css';
 
 function App() {
+
+  const dispatch = useDispatch()
+
+  // const getCharacter = (character) => {
+  //   console.log('>>>>>>>>>>', character)
+  //   dispatch(character)
+  // }
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -17,7 +26,7 @@ function App() {
             </main>
           </Route>
           <Route path="/luke-skywalker" exact={true}>
-            <Profile makeCall={profile.luke} />
+            <Profile makeCall={luke} />
           </Route>
         </Switch>
       </BrowserRouter>

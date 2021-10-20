@@ -3,7 +3,7 @@ import thunk from "redux-thunk";
 import profileReducer from "./profile"
 
 const rootReducer = combineReducers({
-    profileReducer,
+    state: profileReducer,
 });
 
 
