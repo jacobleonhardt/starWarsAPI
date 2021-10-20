@@ -10,18 +10,15 @@ const getInfo = (character) => ({
 // thunks
 
 export const luke = () => async (dispatch) => {
-    console.log('############ IN THUNK')
-    const response = await fetch('/api/character/luke-skywalker');
+    const response = await fetch('https://swapi.dev/api/people/1/');
     const data = await response.json();
 
-    console.log('$$$$$$$$$$$$$$$$ RETURNED: ', data)
     if (response.ok) {
         dispatch(getInfo(data))
         return data
     } else {
         throw response
     }
-
 }
 
 // Reducer

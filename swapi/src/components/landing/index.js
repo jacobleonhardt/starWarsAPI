@@ -1,9 +1,17 @@
 import React from 'react'
 import Character from '../character'
 import { Link } from 'react-router-dom'
+import { luke } from '../../store/profile'
+import { useDispatch } from 'react-redux';
 import './landing.css'
 
 const Landing = () => {
+
+    const dispatch = useDispatch()
+
+    const getLuke = (character) => {
+      dispatch(character())
+    }
 
     return (
         <section className="profiles">
@@ -16,7 +24,7 @@ const Landing = () => {
             <Character name={"HAN SOLO"} image_url={'../../images/han.jpg'} />
             <Character name={"LANDO CALRISSIAN"} image_url={'../../images/lando.jpg'} />
             <Character name={"LEIA ORGANA"} image_url={'../../images/leia.jpg'} />
-            <Link to="/luke-skywalker">
+            <Link to="/luke-skywalker" onClick={getLuke(luke)}>
                 <Character name={"LUKE SKYWALKER"} image_url={'../../images/luke-skywalker-2.jpg'} />
             </Link>
             <Character name={"MACE WINDU"} image_url={'../../images/mace.jpg'} />
