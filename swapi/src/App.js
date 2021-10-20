@@ -5,8 +5,8 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header><img src={logo} /></header>
-      <main className="App-header">
+      <main className="App-main">
+        <img src={logo} alt="star wars logo" />
         <Landing />
       </main>
     </div>
