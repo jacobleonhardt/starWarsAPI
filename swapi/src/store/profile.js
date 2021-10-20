@@ -15,11 +15,13 @@ export const luke = () => async (dispatch) => {
     const data = await response.json();
 
     console.log('$$$$$$$$$$$$$$$$ RETURNED: ', data)
-    if (data.errors) {
-        return data;
+    if (response.ok) {
+        dispatch(getInfo(data))
+        return data
+    } else {
+        throw response
     }
-    dispatch(getInfo(data))
-    return data
+
 }
 
 // Reducer
@@ -30,6 +32,6 @@ export default function profileReducer(state = initialState, action) {
         case LOOK_UP:
             return {profile: action.payload}
         default:
-            return {profile: null}
+            return state
     }
 }

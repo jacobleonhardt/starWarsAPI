@@ -3,17 +3,18 @@ import logo from './components/images/star-wars-logo.png'
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import Profile from './components/profile/index.js';
-import { luke } from './store/profile'
+import { luke } from './store/profile.js'
 import './App.css';
+import { useEffect } from 'react';
 
 function App() {
 
   const dispatch = useDispatch()
 
-  // const getCharacter = (character) => {
-  //   console.log('>>>>>>>>>>', character)
-  //   dispatch(character)
-  // }
+  useEffect(() => {
+    console.log('>>>> HERE <<<<', luke)
+    dispatch(luke())
+  }, [])
 
   return (
     <div className="App">
