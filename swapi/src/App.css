@@ -20,3 +20,18 @@
 .App-link {
   color: #61dafb;
 }
+
+footer {
+  color: rgba(255, 255, 255, .5);
+  text-align: left;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: #FFE81F;
+  transition: .5s;
+  cursor: pointer;
+}

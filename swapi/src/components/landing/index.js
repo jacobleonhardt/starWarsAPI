@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useDispatch } from 'react'
 import Character from '../character'
+import { Link } from 'react-router-dom'
 import './landing.css'
 
 const Landing = () => {
@@ -15,7 +16,9 @@ const Landing = () => {
             <Character name={"HAN SOLO"} image_url={'../../images/han.jpg'} />
             <Character name={"LANDO CALRISSIAN"} image_url={'../../images/lando.jpg'} />
             <Character name={"LEIA ORGANA"} image_url={'../../images/leia.jpg'} />
-            <Character name={"LUKE SKYWALKER"} image_url={'../../images/luke-skywalker-2.jpg'} />
+            <Link to="/luke-skywalker">
+                <Character name={"LUKE SKYWALKER"} image_url={'../../images/luke-skywalker-2.jpg'} />
+            </Link>
             <Character name={"MACE WINDU"} image_url={'../../images/mace.jpg'} />
             <Character name={"OBI-WAN KENOBI"} image_url={'../../images/obi-wan.jpg'} />
             <Character name={"PALPATINE"} image_url={'../../images/palpatine.jpg'} />
