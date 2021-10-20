@@ -1,8 +1,4 @@
-.App {
-  text-align: center;
-}
-
-.App-main img {
+.App img#logo {
   max-width: 100px;
   text-align: left;
 }
@@ -15,23 +11,4 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-footer {
-  color: rgba(255, 255, 255, .5);
-  text-align: left;
-}
-
-footer a {
-  color: #fff;
-}
-
-footer a:hover {
-  color: #FFE81F;
-  transition: .5s;
-  cursor: pointer;
 }

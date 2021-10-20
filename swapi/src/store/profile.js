@@ -21,6 +21,18 @@ export const luke = () => async (dispatch) => {
     }
 }
 
+export const r2d2 = () => async (dispatch) => {
+    const response = await fetch('https://swapi.dev/api/people/3/');
+    const data = await response.json();
+
+    if (response.ok) {
+        dispatch(getInfo(data))
+        return data
+    } else {
+        throw response
+    }
+}
+
 // Reducer
 const initialState = {profile: null}
 

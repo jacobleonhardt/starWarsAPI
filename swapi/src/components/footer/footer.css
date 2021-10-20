@@ -1,0 +1,15 @@
+footer {
+   color: rgba(255, 255, 255, .5);
+   text-align: left;
+   font-size: 14px;
+}
+
+footer a {
+   color: #fff;
+}
+
+footer a:hover {
+   color: #FFE81F;
+   transition: .5s;
+   cursor: pointer;
+}
